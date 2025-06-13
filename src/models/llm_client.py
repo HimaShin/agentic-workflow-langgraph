@@ -1,7 +1,9 @@
-from langchain_community.chat_models import ChatOllama
-
-llm = ChatOllama(model="gemma:2b")
-  # Runs locally using Ollama
+import os
 
 def ask_llm(prompt):
-    return llm.invoke(prompt).content
+    if "STREAMLIT_SERVER_ENABLED" in os.environ:
+        return f"Simulated response from agent for: {prompt}"
+    else:
+        from langchain_community.chat_models import ChatOllama
+        llm = ChatOllama(model="gemma:2b")
+        return llm.invoke(prompt).content
