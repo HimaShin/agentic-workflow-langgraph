@@ -1,11 +1,11 @@
 import os
 
 def ask_llm(prompt):
-    # This is a fake response ONLY for Streamlit Cloud
+    # If running on Streamlit Cloud → simulate response
     if "STREAMLIT_SERVER_ENABLED" in os.environ:
         return f"Reflected on result: Simulated response from agent for task: {prompt}"
-    
-    # Local Ollama usage (ONLY when run locally)
+
+    # Local execution → use Ollama
     try:
         from langchain_community.chat_models import ChatOllama
         llm = ChatOllama(model="gemma:2b")
