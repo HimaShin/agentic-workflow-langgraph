@@ -1,3 +1,7 @@
+from langchain_community.chat_models import ChatOllama
+
+llm = ChatOllama(model="gemma:2b")
+  # Runs locally using Ollama
+
 def ask_llm(prompt):
-    # Always return a fake response (for Streamlit Cloud only)
-    return f"Reflected on result: Simulated response for: {prompt}"
+    return llm.invoke(prompt).content
