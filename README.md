@@ -54,12 +54,12 @@ agentic-workflow-langgraph/
    pip install -r requirements.txt
    ```
 
-4. **Run the LLM model using Ollama**
+4. **Run the LLM model using Ollama(Before that download Ollama)**
    ```bash
    ollama run gemma:2b
    ```
 
-5. **Launch the Streamlit web app**
+6. **Launch the Streamlit web app**
    ```bash
    streamlit run web/app.py
    ```
@@ -73,13 +73,51 @@ Build a chatbot for booking train tickets.
 ```
 
 **🧠 Final Output Example:**
-> Reflected on result: Executed: - Gather input → Find trains → Book → Confirm ticket
+🧠 Final Output
+Reflected on result: Executed: ## Breaking down the task into smaller subtasks:
+
+1. User Input and Validation:
+
+Collect user input regarding:
+Destination
+Travel dates
+Number of passengers
+Preferred travel class
+Any special requirements (e.g., wheelchair access)
+Validate the user input to ensure valid entries and prevent invalid bookings.
+2. Ticket Search and Price Calculation:
+
+Use an API or open-source database to search for available train tickets based on user input.
+Calculate the total cost of the ticket based on selected travel class and other factors.
+Display the total cost to the user for confirmation.
+3. Payment Gateway Integration:
+
+Integrate with a secure payment gateway to allow users to make online payments for their tickets.
+Ensure the payment process is smooth and secure for both the user and the chatbot.
+4. Ticket Booking and Confirmation:
+
+Send a confirmation email and/or push notification to the user acknowledging their booking.
+Provide a dashboard for the user to track their booked tickets, including itinerary details, seat selection, and payment history.
+5. Chatbot Functionality:
+
+Develop a conversational interface that allows users to interact with the chatbot 24/7.
+Respond to user queries, answer frequently asked questions, and provide assistance with booking changes or cancellations.
+Be available to answer follow-up questions and provide additional information.
+Additional Subtasks:
+
+Data management: Store and manage booking data securely, including user preferences, travel history, and payment details.
+Integrations: Integrate with existing systems like calendars, airlines, and payment gateways to provide a comprehensive booking experience.
+Testing and Quality Assurance: Implement automated tests and manual testing to ensure the chatbot function properly and meets user expectations.
 
 ---
 
 ## 📷 Demo Screenshot
 
-_Add a screenshot of your Streamlit app here if available._
+![Screenshot (120)](https://github.com/user-attachments/assets/49cde8f6-49c6-487d-9071-95e3d86b4276)
+![Screenshot (121)](https://github.com/user-attachments/assets/d5c82205-0853-4984-887f-4639780acf0a)
+![Screenshot (122)](https://github.com/user-attachments/assets/bed7ad83-0096-4dff-bf73-dfc39ed8fbc8)
+
+
 
 ---
 
